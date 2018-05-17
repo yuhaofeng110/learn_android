@@ -23,6 +23,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.guest1.geoquiz.CrimeActivity;
+import com.example.guest1.geoquiz.CrimePagerActivity;
 import com.example.guest1.geoquiz.R;
 import com.example.guest1.geoquiz.Single.CrimeLab;
 import com.example.guest1.geoquiz.entity.Crime;
@@ -63,7 +64,7 @@ public class CrimeListFragment extends Fragment {
         @Override
         public void onClick(View v) {
             //Toast.makeText(getActivity(),mCrime.getTitle() +" clicked!",Toast.LENGTH_SHORT).show();
-            Intent intent = CrimeActivity.newIntent(getActivity(),mCrime.getId());
+            Intent intent = CrimePagerActivity.newIntent(getActivity(),mCrime.getId());
             startActivity(intent);
         }
     }
