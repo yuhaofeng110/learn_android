@@ -9,18 +9,20 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".QuizActivity"></activity>
+        <activity android:name=".QuizActivity" />
         <activity android:name=".CrimeActivity" />
         <activity android:name=".CrimeListActivity">
+
+        </activity>
+        <activity
+            android:name=".CrimePagerActivity"
+            android:parentActivityName=".CrimeListActivity" />
+        <activity android:name=".beatbox.BeatBoxActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".CrimePagerActivity"
-            android:parentActivityName=".CrimeListActivity"
-            ></activity>
     </application>
 
 </manifest>

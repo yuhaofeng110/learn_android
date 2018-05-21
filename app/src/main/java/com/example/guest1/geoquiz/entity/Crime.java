@@ -15,7 +15,7 @@ public class Crime {
     private String mTitle;
     private Date mDate;
     private boolean mSolved;
-
+    private String mSuspect;
     private int mRequiresPolices;
 
     private static final int REQUIRE_POLICES = 1;
@@ -23,9 +23,13 @@ public class Crime {
 
 
 
-    public Crime(){
-        mId = UUID.randomUUID();
+    public Crime(UUID id){
+        mId = id;
         mDate = new Date();
+    }
+
+    public Crime(){
+        this(UUID.randomUUID());
     }
 
     public UUID getId() {
@@ -66,5 +70,14 @@ public class Crime {
 
     public void setRequiresPolices(int requiresPolices) {
         mRequiresPolices = requiresPolices;
+    }
+
+
+    public String getSuspect() {
+        return mSuspect;
+    }
+
+    public void setSuspect(String suspect) {
+        mSuspect = suspect;
     }
 }
